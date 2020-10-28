@@ -14,6 +14,7 @@
 		38030E8C2546EB11002E7B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38030E8B2546EB11002E7B9C /* Assets.xcassets */; };
 		38030E8F2546EB11002E7B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38030E8D2546EB11002E7B9C /* LaunchScreen.storyboard */; };
 		3871C1DB25494A3200E7B997 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3871C1DA25494A3200E7B997 /* DetailViewController.swift */; };
+		3871C1DF254964B700E7B997 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3871C1DE254964B700E7B997 /* DataManager.swift */; };
 		3875081F2547B34500EF5C69 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875081E2547B34500EF5C69 /* Model.swift */; };
 		387508232547B56B00EF5C69 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387508222547B56B00EF5C69 /* MemoListTableViewController.swift */; };
 		387508262547BB5700EF5C69 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387508252547BB5700EF5C69 /* ComposeViewController.swift */; };
@@ -30,6 +31,7 @@
 		38030E8E2546EB11002E7B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38030E902546EB11002E7B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3871C1DA25494A3200E7B997 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3871C1DE254964B700E7B997 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3875081E2547B34500EF5C69 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		387508222547B56B00EF5C69 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		387508252547BB5700EF5C69 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		38030E7E2546EB11002E7B9C /* BasicMemo */ = {
 			isa = PBXGroup;
 			children = (
+				3871C1DD254964A800E7B997 /* Data */,
 				3875081D2547B32700EF5C69 /* Model */,
 				38030E7F2546EB11002E7B9C /* AppDelegate.swift */,
 				38030E812546EB11002E7B9C /* SceneDelegate.swift */,
@@ -80,6 +83,14 @@
 				3871C1DA25494A3200E7B997 /* DetailViewController.swift */,
 			);
 			path = BasicMemo;
+			sourceTree = "<group>";
+		};
+		3871C1DD254964A800E7B997 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3871C1DE254964B700E7B997 /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		3875081D2547B32700EF5C69 /* Model */ = {
@@ -167,6 +178,7 @@
 				38030E822546EB11002E7B9C /* SceneDelegate.swift in Sources */,
 				387508292547C2AD00EF5C69 /* UIViewController + Alert.swift in Sources */,
 				3875081F2547B34500EF5C69 /* Model.swift in Sources */,
+				3871C1DF254964B700E7B997 /* DataManager.swift in Sources */,
 				3871C1DB25494A3200E7B997 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

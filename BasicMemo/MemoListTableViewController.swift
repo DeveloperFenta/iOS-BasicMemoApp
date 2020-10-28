@@ -29,9 +29,16 @@ class MemoListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
             if let detailVC = segue.destination as? DetailViewController {
-                detailVC.memo = Memo.dummyMemoList[indexPath.row]
+                detailVC.memo = DataManager.shared.memoList[indexPath.row]
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DataManager.shared.fetchMemo()
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -53,15 +60,15 @@ class MemoListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Memo.dummyMemoList.count
+        return DataManager.shared.memoList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memoCell", for: indexPath)
-        let target = Memo.dummyMemoList[indexPath.row]
+        let target = DataManager.shared.memoList[indexPath.row]
         
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
 
         return cell
     }
