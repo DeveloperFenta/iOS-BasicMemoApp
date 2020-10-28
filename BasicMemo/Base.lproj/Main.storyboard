@@ -74,7 +74,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vm5-hY-RQq">
                                 <rect key="frame" x="0.0" y="761" width="390" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="LQf-7E-REI"/>
+                                    <barButtonItem systemItem="compose" id="LQf-7E-REI">
+                                        <connections>
+                                            <segue destination="QwK-eH-16J" kind="presentation" id="vHE-Ha-sJm"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yHQ-ti-be7">
@@ -134,6 +138,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="c1O-KA-lX2"/>
+                    <connections>
+                        <outlet property="memoTableView" destination="yHQ-ti-be7" id="ofc-Cp-vie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1q-Bl-fgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTP-cz-wFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2122" y="-716"/>
+            <point key="canvasLocation" x="2880" y="-600"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qry-pF-dhM">
@@ -217,9 +224,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ia1-3H-Zow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="-716"/>
+            <point key="canvasLocation" x="1951" y="-600"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vHE-Ha-sJm"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
