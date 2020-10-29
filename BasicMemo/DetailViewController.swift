@@ -66,6 +66,13 @@ class DetailViewController: UIViewController {
         present(alert, animated: true)
     }
     
+    @IBAction func shareMemo(_ sender: Any) {
+        guard let memo = memo?.content else { return }
+        
+        let shareVC = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+        
+        present(shareVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 
