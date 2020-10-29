@@ -41,6 +41,13 @@ class DataManager {
         saveContext()
     }
     
+    func deleteMemo(_ memo: Memo?) {
+        guard let memo = memo else { return }
+        
+        mainContext.delete(memo)
+        saveContext()
+    }
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
